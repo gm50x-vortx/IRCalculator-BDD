@@ -146,7 +146,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 23
  testRunner.When("executo o cálculo do IR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line 24
- testRunner.Then("o salário liquido deverá ser 3034,31", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+ testRunner.Then("o salário liquido deverá ser 3034,32", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line hidden
             this.ScenarioCleanup();
         }

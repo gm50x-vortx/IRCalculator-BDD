@@ -19,9 +19,9 @@ namespace IRCalculator.XUnit
         [Scenario]
         [Example(680, 680)]
         [Example(6357.66, 5478.66)]
-        [Example(3152.38, 3034.31)]
+        [Example(3152.38, 3034.32)]
         [Example(16837.66, 13076.66)]
-        public void CalcularIR(double salario, int salarioExperado)
+        public void CalcularIR(double salario, double salarioEsperado)
         {
             $"Dado um novo cálculo de IR"
                  .x(() => { _driver.NewCalc(); });
@@ -32,9 +32,8 @@ namespace IRCalculator.XUnit
             "Quando executo o cálculo do IR"
                 .x(() => { _driver.CalcularIR(); });
 
-            $"Então o salário liquido deverá ser {salarioExperado}"
-                .x(() => { _driver.ChecarSalario(salarioExperado); });
-
+            $"Então o salário liquido deverá ser {salarioEsperado}"
+                .x(() => { _driver.ChecarSalario(salarioEsperado); });
         }
     }
 }

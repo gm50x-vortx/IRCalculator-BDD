@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace IRCalculator.IRConsole
 {
@@ -6,18 +7,18 @@ namespace IRCalculator.IRConsole
     {
         static void Main(string[] args)
         {
+            List<double> salarios = new List<double>();
+            salarios.Add(1800.58);
+            salarios.Add(2000.25);
+            salarios.Add(2999.30);
+            salarios.Add(4005.00);
+            salarios.Add(6357.66);
 
-            double salario1 = 1800.58;
-            double salario2 = 2000.25;
-            double salario3 = 2999.30;
-            double salario4 = 4005.00;
-            double salario5 = 6357.66;
 
-            new Domain.IRCalculator(salario1).CalculaSalario();
-            new Domain.IRCalculator(salario2).CalculaSalario();
-            new Domain.IRCalculator(salario3).CalculaSalario();
-            new Domain.IRCalculator(salario4).CalculaSalario();
-            new Domain.IRCalculator(salario5).CalculaSalario();
+            salarios.ForEach(salario => 
+            {
+                var sal = new Domain.IRCalculator(salario).CalculaSalario();
+            });
 
             Console.ReadLine();
         }

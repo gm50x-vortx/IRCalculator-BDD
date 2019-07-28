@@ -21,7 +21,7 @@ Cenário: Salário de 3152 reais não fica isento
 	Dado um novo cálculo de IR
 	E preencho a propriedade salário com o valor 3152,38
 	Quando executo o cálculo do IR
-	Então o salário liquido deverá ser 3034,31
+	Então o salário liquido deverá ser 3034,32
 
 Cenário: Salário de 16837 reais não fica isento
 	Dado um novo cálculo de IR

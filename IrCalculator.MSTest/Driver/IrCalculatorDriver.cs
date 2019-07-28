@@ -21,7 +21,7 @@ namespace IRCalculator.MSTest.Driver
 
         public void CalcularIR()
         {            
-            _calculator.CalculaSalario();
+           _calculator._salario = _calculator.CalculaSalario();
         }
 
         public void ChecarSalario(double salarioEsperado)
